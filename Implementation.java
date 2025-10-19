@@ -74,6 +74,32 @@ public class Implementation {
         printNode(root.right);
     }
 
+      public void inOrderTraversal(Node root){
+        if(root==null){
+            return ;
+        }
+        inOrderTraversal(root.left);
+        System.out.print(root.val+" ");
+        inOrderTraversal(root.right);
+      }
+      public void preOrderTraversal(Node root){
+        if(root==null){
+            return ;
+        }
+        System.out.print(root.val+" ");
+        preOrderTraversal(root.left);
+        preOrderTraversal(root.right);
+
+      }
+      public void postOrderTraversal(Node root){
+        if(root==null){
+            return ;
+        }
+        postOrderTraversal(root.left);
+        postOrderTraversal(root.right);
+        System.out.print(root.val+" ");
+      }
+
 public static void main(String [] args){
 
     Node a =new Node(1);
