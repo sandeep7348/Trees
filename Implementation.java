@@ -121,6 +121,15 @@ public static void main(String [] args){
     System.out.println("Total Sum of all the tree is "+impl.totalSum(a));
     System.out.println("Height of tree is : "+impl.height(a));
     System.out.println("Product of all nodes in tree is : "+impl.productOfAllNodes(a));
+    System.out.print("Inorder Traversal: ");
+    impl.inOrderTraversal(a);
+    System.out.println();
+    System.out.print("Preorder Traversal: ");
+    impl.preOrderTraversal(a);
+    System.out.println();
+    System.out.print("Postorder Traversal: ");
+    impl.postOrderTraversal(a);
+    System.out.println();
 }
 
 }
