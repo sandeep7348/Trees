@@ -142,7 +142,7 @@ public static void main(String [] args){
     System.out.print("Postorder Traversal: ");
     impl.postOrderTraversal(a);
     System.out.println();
-    System.out.print("Print elements at level : ");
+    System.out.print("Print elements at level 1: ");
     impl.printElement(a, 0, 1);
 }
 
