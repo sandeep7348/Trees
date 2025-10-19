@@ -100,6 +100,18 @@ public class Implementation {
         System.out.print(root.val+" ");
       }
 
+      public void printElement(Node root,int level,int levelToPrint){
+        if(root==null){
+            return ;
+        }
+        if(level==levelToPrint){
+            System.out.print(root.val+" ");
+            return ;
+        }
+        printElement(root.left,level+1,levelToPrint);
+        printElement(root.right,level+1,levelToPrint);
+      }
+
 public static void main(String [] args){
 
     Node a =new Node(1);
@@ -130,6 +142,8 @@ public static void main(String [] args){
     System.out.print("Postorder Traversal: ");
     impl.postOrderTraversal(a);
     System.out.println();
+    System.out.print("Print elements at level : ");
+    impl.printElement(a, 0, 1);
 }
 
 }
