@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Implementation {
    public int size(Node root){
     if(root==null){
@@ -42,8 +45,29 @@ public class Implementation {
        }
        return root.val*productOfAllNodes(root.left)*productOfAllNodes(root.right);
    }
-
-    public void printNode(Node  root)
+    public void printTreeUsingQueue(Node root)
+    {
+        if(root==null)
+        {
+            return ;
+        }
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(root);
+        while(!queue.isEmpty()){
+            Node curNode=queue.poll();
+            System.out.print(curNode.val+" ");
+            if(curNode.left!=null)
+            {
+                queue.add(curNode.left);
+            }
+            if(curNode.right!=null)
+            {
+                queue.add(curNode.right);
+            }
+        }
+        
+    }
+     public void printNode(Node  root)
     {
         if(root==null)
         {
@@ -144,6 +168,9 @@ public static void main(String [] args){
     System.out.println();
     System.out.print("Print elements at level 1: ");
     impl.printElement(a, 0, 1);
+    System.out.println();
+    System.out.print("Print tree using queue: ");
+    impl.printTreeUsingQueue(a);
 }
 
 }
