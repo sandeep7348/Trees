@@ -1,5 +1,3 @@
-import javax.swing.tree.TreeNode;
-
 public class LowestCommonAncestor {
      boolean contains(Node root,Node node)
     {
